@@ -1,0 +1,18 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+
+
+.root {
+    -fx-background-color: white;
+}
+.left {
+    -fx-fill: radial-gradient(center 60% 35%, radius 45%, reflect, papayawhip, DODGERBLUE 80% );
+}
+.right {
+    -fx-fill: radial-gradient(center 70% 35%, radius 30%, papayawhip, black 60% );
+}
+.rail {
+    -fx-fill: linear-gradient(sienna, burlywood 25%, saddlebrown 50%)
+}
+.text {
+    -fx-fill: white;
+}
