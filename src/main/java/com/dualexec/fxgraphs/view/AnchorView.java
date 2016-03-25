@@ -1,4 +1,4 @@
-package com.dualexec.fx.nets.view;
+package com.dualexec.fxgraphs.view;
 
 import javafx.scene.Node;
 

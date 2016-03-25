@@ -1,4 +1,4 @@
-package application;
+package com.dualexec.fxgraphs;
 
 import org.jgrapht.Graph;
 

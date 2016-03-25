@@ -1,4 +1,4 @@
-package com.dualexec.fx.nets.math;
+package com.dualexec.fxgraphs.math;
 
 import java.util.LinkedList;
 import java.util.List;

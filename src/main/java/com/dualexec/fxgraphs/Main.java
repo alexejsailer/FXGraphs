@@ -1,9 +1,9 @@
-package application;
+package com.dualexec.fxgraphs;
 
-import com.dualexec.fx.nets.editing.DiagramEditView;
-import com.dualexec.fx.nets.view.ArrowView;
-import com.dualexec.fx.nets.view.ConnectionView;
-import com.dualexec.fx.nets.view.PlaceView;
+import com.dualexec.fxgraphs.editing.DiagramEditView;
+import com.dualexec.fxgraphs.view.ArrowView;
+import com.dualexec.fxgraphs.view.ConnectionView;
+import com.dualexec.fxgraphs.view.PlaceView;
 
 import javafx.application.Application;
 import javafx.event.EventHandler;

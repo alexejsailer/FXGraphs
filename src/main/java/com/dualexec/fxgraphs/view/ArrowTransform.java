@@ -1,6 +1,6 @@
-package com.dualexec.fx.nets.view;
+package com.dualexec.fxgraphs.view;
 
-import com.dualexec.fx.nets.math.LineFunction;
+import com.dualexec.fxgraphs.math.LineFunction;
 
 import javafx.beans.property.DoubleProperty;
 import javafx.beans.property.SimpleDoubleProperty;

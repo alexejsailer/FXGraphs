@@ -1,6 +1,6 @@
-package com.dualexec.fx.nets.editing;
+package com.dualexec.fxgraphs.editing;
 
-import com.dualexec.fx.nets.view.DiagramView;
+import com.dualexec.fxgraphs.view.DiagramView;
 
 public class DiagramEditView {
 
