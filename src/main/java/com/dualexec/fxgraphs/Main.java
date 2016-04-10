@@ -1,9 +1,10 @@
 package com.dualexec.fxgraphs;
 
+
 import com.dualexec.fxgraphs.editing.DiagramEditView;
 import com.dualexec.fxgraphs.view.ArrowView;
-import com.dualexec.fxgraphs.view.ConnectionView;
-import com.dualexec.fxgraphs.view.PlaceView;
+import com.dualexec.fxgraphs.view.EdgeView;
+import com.dualexec.fxgraphs.view.Place;
 
 import javafx.application.Application;
 import javafx.event.EventHandler;
@@ -22,9 +23,9 @@ public class Main extends Application {
 	@Override
 	public void start(Stage primaryStage) {
 		DiagramEditView editPart = new DiagramEditView();
-		PlaceView place0 = new PlaceView(100, 100, 60);
-		PlaceView place1 = new PlaceView(250, 150, 60);
-		ConnectionView connectionView = new ConnectionView(place0, place1);
+		Place place0 = new Place(100, 100, 60);
+		Place place1 = new Place(250, 150, 60);
+		EdgeView connectionView = new EdgeView(place0, place1);
 
 		editPart.getDiagramView().getChildren().add(connectionView);
 

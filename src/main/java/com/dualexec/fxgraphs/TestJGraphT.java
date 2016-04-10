@@ -12,7 +12,7 @@ public class TestJGraphT {
 		test.addVertex("V2");
 		String edge = test.addEdge("V1", "V2");
 		System.out.println(edge);
-
+		
 	}
 
 }

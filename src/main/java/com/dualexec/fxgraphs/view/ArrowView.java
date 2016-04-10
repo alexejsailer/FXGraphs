@@ -1,5 +1,7 @@
 package com.dualexec.fxgraphs.view;
 
+import com.dualexec.fxgraphs.math.ArrowTransform;
+
 import javafx.beans.property.DoubleProperty;
 import javafx.beans.property.SimpleDoubleProperty;
 import javafx.beans.value.ChangeListener;
@@ -16,7 +18,7 @@ public class ArrowView extends Group {
 	private DoubleProperty targetY = new SimpleDoubleProperty();
 	private ArrowTransform transform;
 
-	public ArrowView(Node source, Node target) {
+	public ArrowView(VertexView source, VertexView target) {
 
 		Polygon polygon = new Polygon();
 		transformArrow(source, target, polygon);

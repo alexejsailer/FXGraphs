@@ -1,16 +1,16 @@
 package com.dualexec.fxgraphs.editing;
 
-import com.dualexec.fxgraphs.view.PlaceView;
+import com.dualexec.fxgraphs.view.Place;
 
 public class PlaceEditView {
 
-	private PlaceView placeView;
+	private Place placeView;
 
-	public PlaceView getPlaceView() {
+	public Place getPlaceView() {
 		return placeView;
 	}
 
-	public void setPlaceView(PlaceView placeView) {
+	public void setPlaceView(Place placeView) {
 		this.placeView = placeView;
 	}
 
