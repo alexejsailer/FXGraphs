@@ -14,5 +14,4 @@ public class PlaceEditView {
 		this.placeView = placeView;
 	}
 
-
 }

@@ -19,12 +19,12 @@ public class ArrowTransform {
 	private LineFunction lineFunction2;
 
 	public ArrowTransform(DoubleProperty sourceX, DoubleProperty sourceY, DoubleProperty targetX,
-			DoubleProperty targetY) {
-		updateArrow(sourceX, sourceY, targetX, targetY);
+			DoubleProperty targetY, double distance) {
+		updateArrow(sourceX, sourceY, targetX, targetY, distance);
 	}
 
 	public void updateArrow(DoubleProperty sourceX, DoubleProperty sourceY, DoubleProperty targetX,
-			DoubleProperty targetY) {
+			DoubleProperty targetY, double distance) {
 
 		Point2D p0 = new Point2D(sourceX.get(), sourceY.get());
 		Point2D p1 = new Point2D(targetX.get(), targetY.get());
@@ -43,8 +43,8 @@ public class ArrowTransform {
 		lineFunction1 = new LineFunction(p01, p11);
 		lineFunction2 = new LineFunction(p02, p12);
 
-		double a = Math.cos(degree) * 60;
-		double a1 = Math.cos(degree) * 80;
+		double a = Math.cos(degree) * distance;
+		double a1 = Math.cos(degree) * (distance + 20);
 
 		if (lineFunction.getM() >= 0 && (targetX.get() - sourceX.get()) > 0
 				|| (lineFunction.getM() < 0 && (targetX.get() - sourceX.get()) > 0)) {

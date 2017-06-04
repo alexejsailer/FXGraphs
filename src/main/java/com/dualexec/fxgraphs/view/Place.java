@@ -9,11 +9,18 @@ import javafx.scene.shape.StrokeType;
 public class Place extends VertexView {
 
 	private Node anchor;
+	private Circle createOuterCircle;
 
 	public Place(double centerX, double centerY, double radius) {
-//		getAnchors().add(createAnchor(centerX, centerY, radius));
+		// getAnchors().add(createAnchor(centerX, centerY, radius));
 		getChildren().add(createBaseBackroundCircle(centerX, centerY, radius));
+
+		createOuterCircle = createOuterCircle(centerX, centerY, radius);
+
+		getChildren().add(createOuterCircle);
+
 		getChildren().add(createOuterCircle(centerX, centerY, radius));
+
 		getChildren().add(getInnerFillCircle(centerX, centerY, radius));
 		getChildren().add(createCenterDot(centerX, centerY, radius));
 	}
@@ -57,7 +64,16 @@ public class Place extends VertexView {
 		outerCircle.setOpacity(0.4);
 		outerCircle.setLayoutX(centerX);
 		outerCircle.setLayoutY(centerY);
+		setConnectionBounderyNode(outerCircle);
 		return outerCircle;
+	}
+
+	public Circle getCreateOuterCircle() {
+		return createOuterCircle;
+	}
+
+	public void setCreateOuterCircle(Circle createOuterCircle) {
+		this.createOuterCircle = createOuterCircle;
 	}
 
 }

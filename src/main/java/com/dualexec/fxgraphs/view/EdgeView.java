@@ -5,6 +5,7 @@ import com.dualexec.fxgraphs.view.definition.Vertex;
 
 import javafx.beans.property.DoubleProperty;
 import javafx.beans.property.SimpleDoubleProperty;
+import javafx.scene.paint.Color;
 import javafx.scene.shape.Line;
 
 public class EdgeView extends Line implements Edge {
@@ -21,15 +22,12 @@ public class EdgeView extends Line implements Edge {
 		this.source = source;
 		this.target = target;
 		updateNodePosition(source, target);
-//		setStartX(sourceX.get());
-//		setStartY(sourceY.get());
-//		setEndX(targetX.get());
-//		setEndY(targetY.get());
-		startXProperty().bind(source.layoutXProperty().add(sourceX));
-		startYProperty().bind(source.layoutYProperty().add(sourceY));
-		endXProperty().bind(target.layoutXProperty().add(targetX));
-		endYProperty().bind(target.layoutYProperty().add(targetY));
+		startXProperty().bind(source.translateXProperty().add(sourceX));
+		startYProperty().bind(source.translateYProperty().add(sourceY));
+		endXProperty().bind(target.translateXProperty().add(targetX));
+		endYProperty().bind(target.translateYProperty().add(targetY));
 		setStrokeWidth(2);
+		setStroke(Color.GRAY);
 	}
 
 	private void updateNodePosition(VertexView source, VertexView target) {
@@ -52,6 +50,5 @@ public class EdgeView extends Line implements Edge {
 	public Vertex getTarget() {
 		return target;
 	}
-
 
 }

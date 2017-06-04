@@ -9,8 +9,4 @@ package com.dualexec.fxgraphs.editing;
  */
 public abstract class AbstractEditView {
 
-		
-	
-	
-	
 }

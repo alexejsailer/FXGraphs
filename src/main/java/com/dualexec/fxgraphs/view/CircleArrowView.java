@@ -10,7 +10,7 @@ import javafx.scene.Group;
 import javafx.scene.Node;
 import javafx.scene.shape.Polygon;
 
-public class ArrowView extends Group {
+public class CircleArrowView extends Group {
 
 	private DoubleProperty sourceX = new SimpleDoubleProperty();
 	private DoubleProperty sourceY = new SimpleDoubleProperty();
@@ -18,15 +18,15 @@ public class ArrowView extends Group {
 	private DoubleProperty targetY = new SimpleDoubleProperty();
 	private ArrowTransform transform;
 
-	public ArrowView(VertexView source, VertexView target) {
+	public CircleArrowView(VertexView source, VertexView target) {
 
 		Polygon polygon = new Polygon();
 		transformArrow(source, target, polygon);
 
-		source.layoutXProperty().addListener(getChangeListener(source, target, polygon));
-		target.layoutXProperty().addListener(getChangeListener(source, target, polygon));
-		source.layoutYProperty().addListener(getChangeListener(source, target, polygon));
-		target.layoutYProperty().addListener(getChangeListener(source, target, polygon));
+		source.translateXProperty().addListener(getChangeListener(source, target, polygon));
+		target.translateXProperty().addListener(getChangeListener(source, target, polygon));
+		source.translateYProperty().addListener(getChangeListener(source, target, polygon));
+		target.translateYProperty().addListener(getChangeListener(source, target, polygon));
 
 		getChildren().add(polygon);
 	}
@@ -42,7 +42,7 @@ public class ArrowView extends Group {
 
 	private void transformArrow(Node source, Node target, Polygon polygon) {
 		updateNodePosition(source, target);
-		transform = new ArrowTransform(sourceX, sourceY, targetX, targetY);
+		transform = new ArrowTransform(sourceX, sourceY, targetX, targetY, 60d);
 		if (polygon.getPoints().size() == 0) {
 			polygon.getPoints()
 					.addAll(new Double[] { transform.getArrow0X().get(), transform.getArrow0Y().get(),

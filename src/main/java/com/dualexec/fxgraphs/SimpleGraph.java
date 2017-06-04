@@ -16,5 +16,4 @@ public class SimpleGraph extends AbstractBaseGraph<String, String> implements Di
 	 */
 	private static final long serialVersionUID = 1L;
 
-
 }
